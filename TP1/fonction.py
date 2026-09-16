@@ -1,11 +1,6 @@
 def puissance(a, b):
+    if not type(a) is int:
+        raise TypeError("Only integers are allowed")
+    if not type(b) is int:
+        raise TypeError("Only integers are allowed")
     return a ** b
-
-
-while True:
-    try:
-        a = int(input("Entrez la base a : "))
-        b = int(input("Entrez l'exposant b : "))
-        print(f"{a}^{b} = {puissance(a, b)}")
-    except ValueError:
-        print("Veuillez entrer des entiers valides !")
